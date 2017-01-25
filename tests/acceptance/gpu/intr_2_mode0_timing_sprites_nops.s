@@ -368,13 +368,6 @@ setup_and_wait_mode2:
   nops 200
   jp fail_halt
 
-clear_oam:
-  ; Clear OAM
-  ld hl, OAM
-  ld bc, $a0
-  xor a
-  jp memset
-
 test_fail_a:
   print_results _test_fail_a_cb
 _test_fail_a_cb:
